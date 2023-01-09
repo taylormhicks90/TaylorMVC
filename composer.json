@@ -1,0 +1,18 @@
+{
+    "name": "taylor/taylor-mvc",
+    "description": "A minimal MVC Framework",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TaylorMVC\\App\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "taylor",
+            "email": "taylor@instantofferengine.com"
+        }
+    ],
+    "require": {}
+}
