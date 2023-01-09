@@ -2,9 +2,10 @@
 
 namespace TaylorMVC\App\Controllers;
 
+use TaylorMVC\App\Core\Controller;
 use TaylorMVC\App\Core\View;
 
-class ContactController
+class ContactController extends Controller
 {
     public function show()
     {

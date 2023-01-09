@@ -3,6 +3,7 @@
 namespace TaylorMVC\App\Core;
 
 use TaylorMVC\App\Core\Enums\HTTP_METHOD;
+use TaylorMVC\App\Core\Controller;
 use TaylorMVC\App\Core\Exceptions\PageNotFoundException;
 
 /**
@@ -15,6 +16,10 @@ class Router
 {
     public Request $request;
     public Response $response;
+
+    /**
+     * @var array<string,array<string,string|callable|array<string,string>>>
+     */
     protected array $routes = [];
 
     /**
@@ -27,11 +32,16 @@ class Router
         $this->response = $response;
     }
 
+    /**
+     * @param array<string,string|callable|array<string,string>> $callback
+     */
     public function get(string $path, string|array|callable $callback): void
     {
         $this->routes[HTTP_METHOD::GET->value][$path] = $callback;
     }
-
+    /**
+     * @param array< string ,string|callable|array<string,string>> $callback
+     */
     public function post(string $path, string|array|callable $callback): void{
         $this->routes[HTTP_METHOD::POST->value][$path] = $callback;
     }

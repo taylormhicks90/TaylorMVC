@@ -29,11 +29,11 @@ class Application
         $this->router = new Router($this->request, $this->response);
     }
 
-    public function run()
+    public function run(): void
     {
         try {
             $callback = $this->router->resolve();
-            $ousadfasdftput='';
+            $output='';
             if(is_string($callback)){
                 $output = View::render($callback);
             }

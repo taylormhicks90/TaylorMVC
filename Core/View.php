@@ -15,13 +15,13 @@ class View
     {
         ob_start();
         include_once Application::$ROOT_DIR . "/Views/Layouts/app.php";
-        return ob_get_clean();
+        return ob_get_clean()?:'';
     }
 
     protected static function viewContent(string $view): string
     {
         ob_start();
         include_once Application::$ROOT_DIR . "/Views/$view.php";
-        return ob_get_clean();
+        return ob_get_clean()?:'';
     }
 }

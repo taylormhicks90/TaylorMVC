@@ -4,10 +4,7 @@ require_once __DIR__ .'/../vendor/autoload.php';
 use TaylorMVC\App\Controllers\ContactController;
 use TaylorMVC\App\Core\Application;
 
-function app() : TaylorMVC\App\Core\Application
-{
-    return Application::$app;
-}
+
 
 $app = new Application(dirname(__DIR__));
 
